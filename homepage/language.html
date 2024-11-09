@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link href='mystyle.css' rel='stylesheet'>
+        <title>My languages</title>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                let click = document.querySelector('.click')
+                let div = document.querySelector('.skill')
+                click.addEventListener('click', function()
+                {
+                 if (div.style.display === 'none')
+                 {
+                    div.style.display = 'block';
+                 }
+                 else
+                 {
+                    div.style.display = 'none';
+                };
+
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id= 'language d-flex flex-row'>
+            <div class='language container p-5 my-5 bg-dark text-white rounded-4'>
+                <figure>
+                    <img src='images/js.png' class="mx-auto d-block lang" alt= 'Javascript'>
+                    <figcaption>Javascript</figcaption>
+                </figure>
+            </div>
+            <div class= 'language container p-5 my-5 bg-dark text-white rounded-4'>
+                <figure>
+                    <img src='images/c.png' class="mx-auto d-block lang" alt='C'>
+                    <figcaption class='center'>C</figcaption>
+                </figure>
+            </div>
+            <div class= 'language container p-5 my-5 bg-dark text-white rounded-4'>
+                <figure>
+                    <img class="mx-auto d-block lang" src='images/letter-r.png'>
+                    <figcaption>R</figcaption>
+                </figure>
+            </div>
+            <div class= 'language container p-5 my-5 bg-dark text-white rounded-4'>
+                <figure>
+                    <img class="mx-auto d-block lang" src='images/python.png' alt='Python'>
+                    <figcaption>Python</figcaption>
+                </figure>
+            </div>
+         </div>
+         <button class='click'>Show other skills</button>
+         <div class='skill'>
+         <div class='container p-5 my-5 bg-dark text-white'>
+            <ul>
+                <li>Data Analytics</li>
+                <li>Machine Learning</li>
+                <li>Microsoft Excel</li>
+                <li>Microsof Powerpoint</li>
+                <li>Web Development</li>
+            </ul>
+            </div>
+        </div>
+         <footer>
+            <nav class="nav fixed-bottom" >
+                <ul class='pagination'>
+                    <li class='page-item'>  <a class='page-link' href= 'index.html'>Home</a>  </li>
+                    <li class='page-item'>  <a class='page-link' href= 'hobbies.html'>Hobbies</a> </li>
+                    <li class='page-item'>  <a class='page-link' href= 'forms.html'>Forms</a> </li>
+                </ul>
+            </nav>
+           </footer>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+HTML Tags: P, Div, Section, Input, Button, h2, nav, ul, img, figure
+CSS selectors: label, input, .lang, .icon, body
+
+I used bootstrap for styling most of the pages components and I used javascript to hide a section.

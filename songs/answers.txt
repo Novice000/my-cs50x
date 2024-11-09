@@ -1,0 +1,4 @@
+ANS ONE: Taking the sum of the energy, danceability, valence, tempo, loudness, key and then then taking the average of the sum
+
+
+ANS TWO: The listener might have played some songs more than others so just averaging all values might be a misrepresentation so adding weights and more sophisticated techniques might be better for characterization.

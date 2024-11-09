@@ -1,0 +1,51 @@
+{% extends "layout.html"%}
+
+{% block main %}
+
+    <form action="/add" method="get">
+        <button type="submit" class="btn btn-primary">ADD FUNDS</button>
+    </form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">TOTAL</th>
+        </tr>
+    </thead>
+   <tbody>
+    {% for price in table %}
+    <tr>
+        <td class="text-start">{{ price["symbol"] }}</td>
+        <td class="text-end">{{ price["share"] }}</td>
+        <td class="text-end">{{ price["price"] | usd }}</td>
+        <td class="text-end">{{ price["total"] | usd }}</td>
+        <td class="text-end">
+            <form action="/buy" method="post">
+                <input type="hidden" value= {{ price["symbol"] }} name="symbol">
+                <input type="number" name="shares" placeholder=" Buy Share">
+                <button type="submit" class="btn btn-primary">Buy</button>
+            </form>
+            <form action= "/sell" method="post">
+                <input type="hidden" value= {{ price["symbol"] }} name="symbol">
+                <input type="number" name="shares" placeholder="Sell Share">
+                <button type="submit" class="btn btn-primary">Sell</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+            <td class="border-0 text-end">{{ cash | usd }}</td>
+        </tr>
+        <tr>
+            <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
+            <td class="border-0 w-bold text-end">{{ total | usd }}</td>
+        </tr>
+    </tfoot>
+</table>
+{% endblock %}

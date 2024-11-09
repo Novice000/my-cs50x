@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: grid;
+    place-content: center;
+    height: 150%;
+    background-color: black;
+    padding-bottom: 50px;
+}
+form {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: red;
+}
+
+.icon{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.lang{
+    width: 250px;
+}
+
+/* .skill {
+    display: none;
+} */
